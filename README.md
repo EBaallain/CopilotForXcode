@@ -72,8 +72,8 @@ For chat and prompt to code features:
 > 1. Install the app into the Applications folder, open it once.
 > 2. Enable the source editor extension.
 > 3. Grant Accessibility API permission to the extension app.
-> 4. Setup accounts and models in the host app.
-> 5. Optionally, update the settings of each feature in the host app, and setup keybindings.
+> 4. Setup accounts and models in the "Copilot for Xcode" host app.
+> 5. Optionally, update the settings of each feature in the "Copilot for Xcode" host app, and setup keybindings.
 
 ### Install
 
@@ -138,17 +138,17 @@ When this hotkey is not set to enabled globally, it will only work when the serv
 
 ### Setting Up Suggestion Feature
 
-#### Setting Up GitHub Copilot
+#### Setting Up GitHub "Copilot for Xcode" host app
 
-1. In the host app, navigate to "Service - GitHub Copilot" to access your GitHub Copilot account settings.
-2. Click on "Install" to install the language server.
+1. In the "Copilot for Xcode" app, navigate to "Service" tab, and "GitHub Copilot" in the sidebar to access your GitHub Copilot account settings.
+2. Click on Copilot.Vim "Install" to install the language server.
 3. Optionally, set up the path to Node. The default value is simply `node`. Copilot for Xcode.app will attempt to locate Node from the following directories: `/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin`.
 
    If your Node installation is located elsewhere, you can run `which node` from the terminal to obtain the correct path.
 
    If you are using a node version manager that provides a shim executable, you will need to find the path to the actual executable. Please refer to the FAQ for more information.
 
-4. Click on "Sign In", and you will be redirected to a verification website provided by GitHub. A user code will be copied to your clipboard.
+4. In the Language Server Status section, click on "Sign In", and you will be redirected to a verification website provided by GitHub. A user code will be copied to your clipboard.
 5. After signing in, return to the app and click on "Confirm Sign-in" to complete the process.
 6. Go to "Feature - Suggestion" and update the feature provider to "GitHub Copilot".
 
@@ -156,10 +156,10 @@ The installed language server is located at `~/Library/Application Support/com.i
 
 #### Setting Up Codeium
 
-1. In the host app, navigate to "Service - Codeium" to access the Codeium account settings.
+1. In the "Copilot for Xcode" app, navigate to "Service" tab, and "Codeium" in the sidebar to access the Codeium account settings.
 2. Click on "Install" to install the language server.
 3. Click on "Sign In" and you will be redirected to codeium.com. After signing in, a token will be provided. You need to copy and paste this token back into the app to complete the sign-in process.
-4. Go to "Feature - Suggestion" and update the feature provider to "Codeium".
+4. Go to "Feature" tab and "Suggestion" in the sidebar and update the feature provider to "Codeium".
 
 > The key is stored in the keychain. When the helper app tries to access the key for the first time, it will prompt you to enter the password to access the keychain. Please select "Always Allow" to let the helper app access the key.
 
@@ -167,7 +167,7 @@ The installed language server is located at `~/Library/Application Support/com.i
 
 ### Setting Up Chat Feature
 
-1. In the host app, navigate to "Service - Chat Model".
+1. In the "Copilot for Xcode" app, navigate to tab "Service" and sidebar "Chat Model".
 2. Update the OpenAI model or create a new one if necessary. Use the test button to verify the model.
 3. Optionally, set up the embedding model in "Service - Embedding Model", which is required for a subset of the chat feature.
 4. Go to "Feature - Chat" and update the chat/embedding feature provider with the one you just updated/created.
